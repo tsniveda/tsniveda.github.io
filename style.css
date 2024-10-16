@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Choose a modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+    line-height: 1.6; /* Comfortable line spacing */
+}
+
+header {
+    background-color: #333; /* Dark background for header */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px; /* Limit content width for readability */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em; /* Larger heading for name */
+}
+
+h2 {
+    font-size: 1.8em; /* Slightly smaller heading for sections */
+}
+
+/* Section Styles */
+section {
+    padding: 20px 0;
+}
+
+.about p, .experience p, .skills ul, .projects p, .education p, .contact p {
+    margin-bottom: 15px;
+}
+
+/* Experience, Projects, Education */
+.job, .project, .degree {
+    margin-bottom: 20px;
+}
+
+/* Skills */
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 5px;
+    display: flex; /* Align icon and text */
+    align-items: center;
+}
+
+.skills li i { /* Style the icons */
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #007bff; /* Blue color for icons */
+}
+
+/* Projects */
+.projects a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Responsive Design (Optional) */
+@media (max-width: 600px) {
+    .container {
+        max-width: 95%; /* Make content wider on smaller screens */
+    }
+}
