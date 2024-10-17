@@ -1,98 +1,201 @@
-/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Choose a modern font */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light gray background */
-    color: #333; /* Dark gray text */
-    line-height: 1.6; /* Comfortable line spacing */
+    background-color: white;
+    color: #191970;
 }
-
-header {
-    background-color: #333; /* Dark background for header */
-    color: #fff; /* White text */
-    padding: 20px 0;
-    text-align: center;
-}
-
 .container {
-    max-width: 800px; /* Limit content width for readability */
+    width: 80%;
     margin: 0 auto;
     padding: 20px;
+    max-width: 1200px;
+}
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #191970;
+    color: #D3D3D3;
+}
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+header p {
+    margin: 10px 0 0;
 }
 
-h1, h2, h3 {
-    font-weight: bold;
+/* Skillset Section with Icons */
+.skills {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.skills h2 {
+    border-bottom: 2px solid #191970;
+    padding-bottom: 10px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.skills-icons i {
+    font-size: 4em;
+    color: #008080;
+}
+
+/* Horizontal Slider for Work Experience */
+.experience {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.experience h2 {
+    border-bottom: 2px solid #191970;
+    padding-bottom: 10px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    flex: 0 0 60%; /* Set width */
+    background-color: #fff;
+    border: 1px solid #191970;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+.carousel-item h3 {
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-h1 {
-    font-size: 2.5em; /* Larger heading for name */
-}
-
-h2 {
-    font-size: 1.8em; /* Slightly smaller heading for sections */
-}
-
-/* Section Styles */
-section {
-    padding: 20px 0;
-}
-
-.about p, .experience p, .skills ul, .projects p, .education p, .contact p {
-    margin-bottom: 15px;
-}
-
-/* Experience, Projects, Education */
-.job, .project, .degree {
-    margin-bottom: 20px;
-}
-
-/* Skills */
-.skills ul {
+.carousel-item ul {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
 }
 
-.skills li {
-    margin-bottom: 5px;
-    display: flex; /* Align icon and text */
+/* Hide scrollbar in webkit-based browsers (Chrome, Safari) */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* General scrollbar for non-webkit browsers */
+.carousel-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Certifications Section */
+.certifications {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.certifications h2 {
+    border-bottom: 2px solid #191970;
+    padding-bottom: 10px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.certification-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.certification-card .image-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-
-.skills li i { /* Style the icons */
-    margin-right: 10px;
+.certification-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+.card-content h3 {
+    margin: 0;
     font-size: 1.2em;
-    color: #007bff; /* Blue color for icons */
+    margin-bottom: 10px;
 }
-
-/* Projects */
-.projects a {
-    color: #007bff; /* Blue link color */
-    text-decoration: none;
-}
-
-.projects a:hover {
-    text-decoration: underline;
-}
-
-.company-logo {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add spacing between logo and text */
+.card-content p {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
-    background-color: #333; /* Dark background for footer */
-    color: #fff; /* White text */
-    padding: 10px 0;
     text-align: center;
+    padding: 20px 0;
+    background-color: #191970;
+    color: white;
 }
 
-/* Responsive Design (Optional) */
-@media (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
     .container {
-        max-width: 95%; /* Make content wider on smaller screens */
+        width: 95%;
+    }
+    .skills-icons i {
+        font-size: 3em;
+    }
+    .carousel-item {
+        flex: 0 0 80%;
     }
 }
