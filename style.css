@@ -276,7 +276,7 @@ footer {
 
 /* Chatbot Input Field */
 #chat-input {
-    width: calc(100% - 50px);
+    width: 100%;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ddd;
@@ -304,7 +304,7 @@ footer {
 
 /* Hover Effect for Chatbot Submit Button */
 #chat-submit:hover {
-    background-color: #0056b3; /* Darker blue for hover */
+    background-color: #008080; /* Darker blue for hover */
 }
 
 

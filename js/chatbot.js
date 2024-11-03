@@ -12,7 +12,7 @@ async function getResponse(question) {
         })
     });
     const data = await response.json();
-    return data.choices[0].text.trim();
+    return question;//return data.choices[0].text.trim();
 }
 
 document.querySelector("#chat-submit").addEventListener("click", async () => {
