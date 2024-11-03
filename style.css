@@ -288,18 +288,25 @@ footer {
 
 /* Chatbot Send Button */
 #chat-submit {
-    width: 40px;
-    height: 40px;
-    background-color: #007bff;
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff; /* Same blue color as the download button */
     color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 4px; /* Rectangular with slight rounding */
     cursor: pointer;
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8px;
+    transition: background-color 0.3s;
 }
+
+/* Hover Effect for Chatbot Submit Button */
+#chat-submit:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+}
+
 
 /* Chat Output */
 #chat-output {
