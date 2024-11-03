@@ -251,6 +251,20 @@ footer {
     color: white;
 }
 
+#chatbot {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+#chat-input, #chat-submit {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
