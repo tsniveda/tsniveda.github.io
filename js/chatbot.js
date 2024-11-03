@@ -1,4 +1,4 @@
-async function getResponse(question) {
+async function getResponse(previous, question) {
     const response = await fetch("https://api.openai.com/v1/completions", {
         method: "POST",
         headers: {
@@ -18,6 +18,7 @@ async function getResponse(question) {
 document.querySelector("#chat-submit").addEventListener("click", async () => {
     const previous = document.querySelector("#chat-output").textContent;
     const question = document.querySelector("#chat-input").value;
+    document.querySelector("#chat-input").value = "";
     const response = await getResponse(previous, question);
     document.querySelector("#chat-output").textContent = response;
 });
