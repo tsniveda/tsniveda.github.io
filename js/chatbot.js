@@ -12,11 +12,12 @@ async function getResponse(question) {
         })
     });
     const data = await response.json();
-    return question;//return data.choices[0].text.trim();
+    return previous + "\n" + question;//return data.choices[0].text.trim();
 }
 
 document.querySelector("#chat-submit").addEventListener("click", async () => {
+    const previous = document.querySelector("#chat-output").textContent;
     const question = document.querySelector("#chat-input").value;
-    const response = await getResponse(question);
+    const response = await getResponse(previous, question);
     document.querySelector("#chat-output").textContent = response;
 });
